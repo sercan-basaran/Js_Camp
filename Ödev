@@ -1,3 +1,95 @@
+
+function checkPrime(...numbers) {
+  if (numbers <= 1) {
+    return false;
+  } else {
+    for (let i = 2; i < numbers.length; i++) {
+      if (numbers % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+
+function arr(element) {
+  const isPrime = checkPrime(element);
+  if (isPrime) {
+    console.log(`${element} is a prime number`);
+  } else {
+    console.log(`${element} is NOT a prime number`);
+  }
+
+  let arr=prompt();
+};
+
+
+//Arkadaş Sayılar
+
+function friends(birincisayi, ikincisayi) {
+  birinciTop = 0;
+  ikinciTop = 0;
+
+  for (let i = 1; i < birincisayi; i++) {
+
+    if (birincisayi % i == 0)
+
+      birinciTop += i;
+
+
+
+  }
+
+  for (let i = 1; i < ikincisayi; i++) {
+
+    if (ikincisayi % i == 0)
+
+      ikinciTop += i;
+
+
+
+  }
+
+  if (birincisayi == ikinciTop && ikincisayi == birinciTop) {
+    console.log("Arkadaş Sayılardır.");
+  }
+
+
+
+  else {
+
+    console.log("Arkadaş Sayılar Değildir.");
+
+  }
+}
+
+
+
+//Mükemmel Sayılar
+function perfectNumber() {
+  let sum;
+
+  for (let number = 1; number <= 1000; number++) {
+    sum = 0;
+
+    for (let i = 1; i <= number / 2; i++) {
+      if (number % i == 0) {
+        sum += i;
+      }
+    }
+
+    if (sum == number) {
+      console.log("%d is perfect\n", number);
+    }
+  }
+
+  return 0;
+
+  
+}
+
+//0-1000 asal sayılar
 for (var counter = 0; counter <= 100; counter++) {
 
     var notPrime = false;
